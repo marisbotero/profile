@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Jekyll Theme Named Book
-date: 2018-01-28
+date: 2015-08-28
 tags: english
 category: blog
 ---
@@ -35,3 +35,11 @@ Customize
 
 ### warning
 
+Please do not delete the first two lines of style.css file.
+
+End.
+----
+
+If you like it, [star](https://github.com/kkninjae/book) it :).
+
+If you have a problem, [github issue is ready](https://github.com/kkninjae/book/issues).
