@@ -1030,3 +1030,114 @@ opacity:1;
   90%{opacity: 1; }
   95%{opacity: 1; }
   100% {opacity: 1; } }
+
+
+
+  body{
+  background: #fff;
+  text-align:center;
+}
+
+/* brain animation  */
+@keyframes rotate{
+  00%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+@keyframes rotate2{
+  00%,100%{transform: rotate(0deg);}
+  25%,75%{transform: rotate(-45deg);}
+  50%{transform: rotate(110deg);}
+}
+
+@keyframes rotate3{
+  00%,100%{transform: rotate(0deg);}
+  25%{transform: rotate(50deg);}
+  75%{transform: rotate(-50deg);}
+}
+
+@keyframes colorswitchGreen{
+  00%,20%,100%{stroke: #4fdfad;}
+  10%{stroke: #1f2435;}
+}
+
+@keyframes colorswitchPink{
+  00%,20%,100%{stroke: #e95095;}
+  10%{stroke: #1f2435;}
+}
+
+@keyframes colorswitchYellow{
+  00%,20%,100%{stroke: #ffe680;}
+  10%{stroke: #1f2435;}
+}
+
+@keyframes scaleup{
+  00%,100%{transform: scale(1);}
+  25%{transform: scale(1.4);}
+  75%{transform: scale(0.6);}
+}
+
+@keyframes trans{
+  00%,050%,100%{transform: translate(0,0);}
+  025%,075%{transform: translate(0,-0.3em);}
+}
+
+@supports(transform-origin: 50% 50%){
+  .star{
+    animation: rotate 5s linear infinite;
+    transform-origin:16px 30px;
+  }
+
+  .triangle{
+    animation: rotate 7s linear infinite;
+    transform-origin:77px 32px;
+  }
+
+  .asterix{
+    animation: rotate2 10s linear infinite;
+    transform-origin:53px 21px;
+  }
+
+  .love{
+    animation: rotate3 5s linear infinite;
+    transform-origin:107px 26px;
+  }
+
+  .point{
+    animation: scaleup 5s linear infinite;
+    transform-origin:50% 50%;
+    -moz-animation: none;
+  }
+  .brain:hover .star,.brain:hover .triangle{
+    animation: trans 0.6s ease-in-out infinite;
+  }
+  .brain:hover .asterix,.brain:hover .love{
+    animation: trans 0.6s ease-in-out 0.1s infinite;
+  }
+  .brain:hover .NleftTop,.brain:hover .NrightBot1,.brain:hover .NrightBot2{
+    animation: colorswitchGreen 0.6s linear infinite;
+  }
+  .brain:hover .NrightTop{
+    animation: colorswitchPink 0.6s linear infinite;
+    animation-delay: 0.1s;
+  }
+  .brain:hover .NleftBot{
+    animation: colorswitchYellow 0.6s linear infinite;
+    animation-delay: 0.2s;
+  }
+ }
+
+.NrightBot1,.NrightBot2,.NleftTop{
+  animation: colorswitchGreen 5s linear infinite;
+}
+.NleftTop{
+  animation-delay: 2s;
+}
+.NrightTop{
+  animation: colorswitchPink 3s linear infinite;
+  animation-delay: 1s;
+}
+.NleftBot{
+  animation: colorswitchYellow 6s linear infinite;
+  animation-delay: 3s;
+}
