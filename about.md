@@ -9,7 +9,7 @@ permalink: /about/
 
 
 Cuando tengo que hablar de mí a veces solo puedo más que decir mi nombre. =)
-«No sé quién soy, pero sé que lo que hago me hace» :Ingeniera /Desarrolladora Web / Aprendiz 
+«No sé quién soy, pero sé que lo que hago me hace» 
 
  
 
