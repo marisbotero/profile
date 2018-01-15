@@ -120,7 +120,7 @@ img {
   }
 
   .page-wrapper {
-    /*background-color: #58c6fb;*/
+    
       background-image: linear-gradient(to bottom left, #fe87c3 0%, #828dfe 50%, #6d58f3 100%)
   }
 }
@@ -1032,112 +1032,281 @@ opacity:1;
   100% {opacity: 1; } }
 
 
-
-  body{
-  background: #fff;
-  text-align:center;
+  // RESETS
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
 }
-
-/* brain animation  */
-@keyframes rotate{
-  00%{transform: rotate(0deg);}
-  100%{transform: rotate(360deg);}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
-
-@keyframes rotate2{
-  00%,100%{transform: rotate(0deg);}
-  25%,75%{transform: rotate(-45deg);}
-  50%{transform: rotate(110deg);}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
-
-@keyframes rotate3{
-  00%,100%{transform: rotate(0deg);}
-  25%{transform: rotate(50deg);}
-  75%{transform: rotate(-50deg);}
+a, a:hover, a:focus, a:active {
+  text-decoration: none!important;
+  outline: none;
 }
-
-@keyframes colorswitchGreen{
-  00%,20%,100%{stroke: #4fdfad;}
-  10%{stroke: #1f2435;}
+.npd{
+  padding: 0;
 }
-
-@keyframes colorswitchPink{
-  00%,20%,100%{stroke: #e95095;}
-  10%{stroke: #1f2435;}
+ul,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-
-@keyframes colorswitchYellow{
-  00%,20%,100%{stroke: #ffe680;}
-  10%{stroke: #1f2435;}
+a:hover{
+  opacity: 0.7;
+  color: white;
 }
-
-@keyframes scaleup{
-  00%,100%{transform: scale(1);}
-  25%{transform: scale(1.4);}
-  75%{transform: scale(0.6);}
+body{
+  font-size: 14px;
+  color: black;
 }
-
-@keyframes trans{
-  00%,050%,100%{transform: translate(0,0);}
-  025%,075%{transform: translate(0,-0.3em);}
+.clear{
+  clear: both;
 }
+img{
+  max-width: 100%;
+}
+h1, h2, h3, h4{
+  padding: 0;
+  margin: 0;
+}
+// VARIABLES
+$mainblack: #22262b;
+$amain: #fbb053;
+$grisclaro: #e0e2e2;
+$display: #abadc6;
+$item: #d1c9bf;
+$codred: #ac5e47;
 
-@supports(transform-origin: 50% 50%){
-  .star{
-    animation: rotate 5s linear infinite;
-    transform-origin:16px 30px;
+// MISC
+.wrap{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: $mainblack;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.comp{
+    width: 100%;
+    height: 194px;
+    text-align: center;
+    .monitor{
+    width: 275px;
+    height: 181px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+    padding: 9px;
+    border: solid 1px $grisclaro;
+    background-color: black;
+    }
+    .mid{
+      float: left;
+      display: block;
+      height: 100%;
+      position: relative;
+      background-color: $display;
+      width: 50%;
+      &.codigo{
+        background-color: $mainblack;
+      }
+    }
+    .site{
+      overflow: hidden;
+      position: absolute;
+    width: 105px;
+    height: 138px;
+      bottom: 0;
+      right: 0;
+      .topbar{
+      width: 100%;
+
+      }
+      .cerrar{
+      width: 100%;
+      padding: 3px;
+      line-height: 0;
+      display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 4px 4px 0px 0px;
+      background-color: #afa895;
+      &>div{
+        display: inline-block;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: white;
+        margin: 0px 1px;
+      }
+    }
+    .inhead{
+      padding: 2px;
+      height: 5px;
+      background-color: #ddd8cf;
+      .item{
+        width: 10px;
+          height: 1px;
+        background-color: $item;
+        margin: 0 1px;
+        display: block;
+        float: left;
+      }
+    }
+    }
+    .txr{
+      text-align: right;
+    .item{
+      float: right;
+    }
+    }
+    .inslid{
+      width: 100%;
+      height: 33px;
+      background-color: #efebe2;
+    }
+    .incont{
+    padding-top: 10px;
+    background: #fefaf0;
+      .item{
+      background-color: $item;
+      width: 53px;
+      height: 2px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 1px;
+      &:nth-child(1){
+        width: 20px;
+      }
+      &:nth-child(2){
+        margin-top: 3px;
+        width: 41px;
+      }
+      &:nth-child(3){
+        width: 32px;
+      }
+      &:nth-child(4){
+        width: 23px;
+      }
+      }
+      .wid{
+        width: 100%;
+        padding: 8px 1px;
+        .itwid{
+          width: 33.333%;
+          float: left;
+          height: 26px;
+          padding: 0px 3px;
+          &>div{
+            width: 100%;
+            height: 100%;
+            background-color: #f5f1e6;
+            position: relative;
+            .contfoot{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 6px;
+              width: 100%;
+              background-color: #ebe5dc;
+            }
+          }
+        }
+      }
+      .infoot{
+        background-color: #efebe2;
+        height: 26px;
+        width: 100%;
+      }
+    }
+  @keyframes code {
+      0% {
+      opacity: 1;
+      }
+      50% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 1;
+      }
   }
-
-  .triangle{
-    animation: rotate 7s linear infinite;
-    transform-origin:77px 32px;
-  }
-
-  .asterix{
-    animation: rotate2 10s linear infinite;
-    transform-origin:53px 21px;
-  }
-
-  .love{
-    animation: rotate3 5s linear infinite;
-    transform-origin:107px 26px;
-  }
-
-  .point{
-    animation: scaleup 5s linear infinite;
-    transform-origin:50% 50%;
-    -moz-animation: none;
-  }
-  .brain:hover .star,.brain:hover .triangle{
-    animation: trans 0.6s ease-in-out infinite;
-  }
-  .brain:hover .asterix,.brain:hover .love{
-    animation: trans 0.6s ease-in-out 0.1s infinite;
-  }
-  .brain:hover .NleftTop,.brain:hover .NrightBot1,.brain:hover .NrightBot2{
-    animation: colorswitchGreen 0.6s linear infinite;
-  }
-  .brain:hover .NrightTop{
-    animation: colorswitchPink 0.6s linear infinite;
-    animation-delay: 0.1s;
-  }
-  .brain:hover .NleftBot{
-    animation: colorswitchYellow 0.6s linear infinite;
-    animation-delay: 0.2s;
-  }
- }
-
-.NrightBot1,.NrightBot2,.NleftTop{
-  animation: colorswitchGreen 5s linear infinite;
+    .codigo{
+      padding: 14px 0px 14px 14px;
+      .var{
+        background-color: $codred;
+        animation: code;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite;
+      }
+      .cont{
+        background-color: #464748;
+        animation: code;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      }
+      .fun{
+        background-color: $amain;
+        animation: code;
+      animation-duration: 0.2s;
+      animation-iteration-count: infinite;
+      }
+      .atr{
+        background-color: #645572;
+        animation: code;
+      animation-duration: 0.1s;
+      animation-iteration-count: infinite;
+      }
+      .item{
+        height: 3px;
+        width: 20px;
+        float: left;
+        margin-right: 3px;
+        &.min{
+          width: 13px;
+        }
+        &.lrg{
+          width: 30px;
+        }
+      }
+      .line{
+        padding: 2px 0;
+        width: 100%;
+      }
+      .tab1{
+        padding-left: 5px;
+      }
+      .tab2{
+        padding-left: 8px;
+      }
+      .tab3{
+        padding-left: 10px;
+      }
+      .tab4{
+        padding-left: 12px;
+      }
+    }
 }
-.NleftTop{
-  animation-delay: 2s;
-}
-.NrightTop{
-  animation: colorswitchPink 3s linear infinite;
-  animation-delay: 1s;
-}
-.NleftBot{
-  animation: colorswitchYellow 6s linear infinite;
-  animation-delay: 3s;
-}
+
+.base {
+    width: 338px;
+    height: 12px;
+    background: $grisclaro;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0px 0px 6px 6px;
+}  
