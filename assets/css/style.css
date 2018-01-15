@@ -1030,90 +1030,395 @@ opacity:1;
   95%{opacity: 1; }
   100% {opacity: 1; } }
 
-  @import url(//fonts.googleapis.com/css?family=Vibur);
-html,body{
-  height:100%
-}
-body {
-  background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat;
-  background-size:cover;
-  margin:0
-}
-.logo {
-  text-align: center;
-  width: 65%;
-  height: 250px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+  $bgColor: #263f3d;
+$screenBg: #2b9891;
+$screenFg: #bb5284;
+$screenDsp: #ffefda;
+$screenBase: #2a9790;
+$screenBasePlugs: #7bd8d6;
+$screenBaseMiddle: #734c82;
+$screenBaseUsb: #704c7e;
+$screenBaseUsb2: #9f4279;
+$displayItem1: #faa799;
+$displayItem2: #f9b6ac;
+$mugLiquid: #faa799;
+$particleColor1: #628dd1;
+$particleColor2: #4c988e;
 
-.logo b{
-  font: 100 15vh "Vibur";
-  color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
-}
-.logo b span{
-  animation: blink linear infinite 2s;
-}
-@keyframes blink {
-  78% {
-    color: inherit;
-    text-shadow: inherit;
+@keyframes screenOn {
+  0% {
+    transform: scale3d(0,0,1);
   }
-  79%{
-     color: #333;
+  1% {
+    transform: scale3d(0.01, 0.01, 1);
+  }
+  50% {
+    transform: scale3d(1, 0.01, 1);
+  }
+  100% {
+    transform: scale3d(1,1,1);
+  }
+}
+@keyframes slideMug {
+  0% {
+    transform-origin: 100% 100%;
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes up1 {
+  0% {
+    transform: rotateZ(45deg) translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
   }
   80% {
-    
-    text-shadow: none;
+    opacity: 1;
   }
-  81% {
-    color: inherit;
-    text-shadow: inherit;
+  100% {
+    opacity: 0;
+    transform: rotateZ(45deg) translateY(-62px) translateX(-62px);
   }
-  82% {
-    color: #333;
-    text-shadow: none;
+}
+@keyframes up2 {
+  0% {
+    transform: rotateZ(45deg) translateY(0px) translateX(0px);
+    opacity: 0;
   }
-  83% {
-    color: inherit;
-    text-shadow: inherit;
+  25% {
+    opacity: 1;
   }
-  92% {
-    color: #333;
-    text-shadow: none;
+  80% {
+    opacity: 1;
   }
-  92.5% {
-    color: inherit;
-    text-shadow: inherit;
+  100% {
+    opacity: 0;
+    transform: rotateZ(45deg) translateY(-42px) translateX(-42px);
+  }
+}
+@keyframes up3 {
+  0% {
+    transform: rotateZ(45deg) translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotateZ(45deg) translateY(-82px) translateX(-82px);
   }
 }
 
-
-/* follow me @nodws */
-#btn-twtr{
-  clear:both;
-  color:#fff;
-  border:2px solid;
-  border-radius:3px;
-  text-align:center;
-  text-decoration:none;
-  display:block;
-  font-family:sans-serif;
-  font-size:14px;
-  width:13em;
-  padding:5px 10px;
-  font-weight:600;
-  position:absolute;
-  bottom:20px;
-  left:0;
-  right:0;
-  margin:0 auto;
-  background:rgba(0,0,0,0.2);
-  box-shadow:0 0 0px 3px rgba(0,0,0,0.2);
-  opacity:0.4
-}#btn-twtr:hover{color:#fff;opacity:1}
+// Now make it count
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bgColor;
+  * {
+    box-sizing: border-box;
+  }
+}
+.laptop-wrapper {
+  width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: .25s ease-in-out;
+}
+.screen {
+  position: relative;
+  &__window {
+    width: 304px;
+    height: 213px;
+    &--background {
+      background-color: $screenBg;
+      border-radius: 13px/16px;
+    }
+    &--foreground {
+      background-color: $screenFg;
+      top: 0;
+      left: 16px;
+      border-radius: 16px;
+      padding: 16px;
+    }
+  }
+  &__display {
+    width: 272px;
+    height: 172px;
+    background-color: $screenDsp;
+    padding: 23px 32px;
+    animation: screenOn 1s ease-in-out 0s backwards; 
+  }
+  &__base {
+    width: 361px;
+    height: 40px;
+    background-color: $screenBase;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    z-index: 10;
+    .base {
+      position: absolute;
+      top: 0;
+      &__middle {
+        width: 65px;
+        height: 21px;
+        left: 208px;
+        background-color: $screenBaseMiddle;
+        border-radius: 0 0 14px 14px / 0px 0px 18px 18px;
+      }
+      &__plugs {
+        width: 123px;
+        height: 40px;
+        background-color: $screenBasePlugs;
+        border-radius: 20px;
+      }
+      .plug {
+        top: 15px;
+        position: absolute;
+        border-radius: 6px;
+        height: 11px;
+        &--usb ,
+        &--psu {
+          background-color: $screenBaseUsb;
+        }
+        &--usb {
+          width: 21px;
+          &--1 {
+            left: 16px;
+            background-color: $screenBaseUsb2;
+          }
+          &--2 {
+            left: 41px;
+          }
+        }
+        &--psu {
+          width: 11px;
+          right: 18px;
+        }
+      }
+    }
+  }
+  .row {
+    // opacity: 0;
+    margin-top: 18px;
+    &:first-child {
+      margin-top: 0;
+    }
+    @for $i from 1 through 3 {
+      &:nth-child(3n+#{$i}){
+        animation: slideDown 0.6s cubic-bezier(0.18, 0.92, 0.71, 1.21) (1 + 0.2 * $i)*1s both;
+      }
+    }
+  }
+  .display__item {
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+    vertical-align: top;
+    &--stripe {
+      width: 78px;
+      height: 30px;
+      border-radius: 3px;
+      margin-right: 7px;
+      background-color: $displayItem1;
+      &:before {
+        content: "";
+        display: block;
+        width: 84px;
+        height: 5px;
+        background-color: $screenDsp;
+          transform: rotateZ(-17deg);
+          bottom: 0;
+          left: -2px;
+          position: absolute;
+          transform-origin: 0 0;
+      }
+    }
+    &--box {
+      width: 31px;
+      height: 31px;
+      border-radius: 3px;
+      background-color: $displayItem2;
+      &:after,&:before {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 3px;
+        background-color: $screenDsp;
+        transform-origin: 0 0;
+      }
+      &:after {
+        transform: rotateZ(45deg);
+        top: -2px;
+        left: 0;
+      }
+      &:before {
+          transform: rotateZ(-45deg);
+          bottom: -2px;
+          left: 0;
+      }
+    }
+    &--message {
+      background-color: $displayItem1;
+      margin-left: 10px;
+      width: 72px;
+      height: 9px;
+      border-radius: 6px;
+      font-size: 0;
+      vertical-align: top;
+      &:after, &:before {
+        width: 72px;
+        height: 9px;
+        border-radius: 6px;
+        background-color: inherit;
+        content: "";
+        display: block;
+        position: relative;
+      }
+      &:before {
+        top: 24px;
+        width: 24px; 
+      }
+      &:after {
+        top: 3px;
+      }
+    }
+  }
+  &__shadow {
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 439px;
+      height: 17px;
+      border-radius: 9px;
+      top: 24px;
+      left: 2px;
+  }
+}
+.mug {
+  width: 75px;
+  height: 97px;
+  background-color: $screenBaseMiddle;
+  position: absolute;
+  top: 147px;
+  left: 355px;
+  animation: slideMug 1s ease-in-out 1.5s backwards;
+  &__liquid {
+    width: 19px;
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    &--small {
+      background-color: $screenFg;
+      height: 17px;
+      left: 28px;
+    }
+    &--big {
+      background-color: $mugLiquid;
+      height: 49px;
+      left: 47px;
+    }
+  }
+  &__handhelper {
+      position: absolute;
+      z-index: -1;
+      top: 14px;
+      left: 72px;
+      width: 35px;
+      height: 68px;
+      background-color: #263f3d;
+      border: 14px solid #bb5284;
+      border-left: none;
+      border-radius: 0 34px 34px 0 / 0 30px 30px 0;
+      animation: slideDown .5s ease-in-out 2.4s backwards;
+  }
+  &__particles {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+  }
+  .particle {
+    position: absolute;
+    top: 0;
+    transform: rotateZ(45deg);
+    &--diamond {
+      width: 9px;
+      height: 9px;
+      &--1 {
+        left: 44px;
+        animation: up1 4s ease-in-out 3 + 0.7s infinite backwards;
+      }
+      &--2 {
+        left: 25px;
+        animation: up3 5.5s ease-in-out 3 + 2s infinite backwards;
+      }
+    }
+    &--cross {
+      width: 9px;
+      height: 3px;
+      &:before {
+        content: "";
+        display: block;
+        height: 9px;
+        width: 3px;
+        position: absolute;
+        top: -3px;
+        left: 3px;
+        background-color: inherit;
+      }
+      &--1 {
+        left: 5px;
+        animation: up1 3.3s ease-in-out 3 + 0.5s infinite backwards;
+      }
+      &--2 {
+        left: 11px;
+        animation: up2 2.6s ease-in-out 3 + 1.2s infinite backwards;
+      }
+      &--3 {
+        left: 22px;
+        animation: up3 3s ease-in-out 3 + .3s infinite backwards;
+      }
+      &--4 {
+        left: 33px;
+        animation: up2 4s ease-in-out 3 + 0s infinite backwards;
+      }
+    }
+    &--pink {
+      background-color: $screenFg;
+    }
+    &--blue {
+      background-color: $particleColor1;
+    }
+    &--green {
+      background-color: $particleColor2;
+    }
+    &--yellow {
+      background-color: $screenDsp;
+    }
+  }
+}

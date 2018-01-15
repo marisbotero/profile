@@ -6,7 +6,6 @@ permalink: /about/
 
 <div class="index-wrapper">
 
-<div class="logo"><b>d<span>ri</span>bb<span>b</span>le</b></div>
 
 
 Cuando tengo que hablar de mí a veces solo puedo más que decir mi nombre. =)
