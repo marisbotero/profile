@@ -111,7 +111,7 @@ img {
   content: "";
   display: block;
   padding-top: 50%;
-  background-color: #58c6fb;
+  background-image: linear-gradient(to bottom left, #fe87c3 0%, #828dfe 50%, #6d58f3 100%);
 }
 
 @media (min-width: 769px) {
@@ -120,7 +120,8 @@ img {
   }
 
   .page-wrapper {
-    background-color: #58c6fb;
+    /*background-color: #58c6fb;*/
+      background-image: linear-gradient(to bottom left, #fe87c3 0%, #828dfe 50%, #6d58f3 100%)
   }
 }
 
