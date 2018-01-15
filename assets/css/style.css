@@ -111,7 +111,7 @@ img {
   content: "";
   display: block;
   padding-top: 50%;
-  background-color: blue;
+  background-color: #f8f8f8;
 }
 
 @media (min-width: 769px) {
