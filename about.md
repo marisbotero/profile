@@ -7,9 +7,9 @@ permalink: /about/
 <div class="index-wrapper">
 
 
+When I have to talk about myself sometimes I can only say more than my name. =)
+«I do not know who I am, but I know that I do it with me»❤ Software Developer ❤
 
-Cuando tengo que hablar de mí a veces solo puedo más que decir mi nombre. =)
-«No sé quién soy, pero sé que lo que hago me hace» :Ingeniera /Desarrolladora Web / Aprendiz 
 
  
 
