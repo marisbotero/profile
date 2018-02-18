@@ -9,7 +9,7 @@ category: blog
 Simple is better
 -----------
 
-  </section>
+ 
   <section>
     <div class="loader loader-2">
       <svg class="loader-star" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -126,4 +126,3 @@ Simple is better
       <div class="css-heart heart4"></div>
     </div>
   </section>
-</div>
