@@ -7,7 +7,7 @@ permalink: /about/
 <div class="index-wrapper">
 
 
-When I have to talk about myself sometimes I can only say more than my name. =)
+When I have to talk about myself sometimes I can only say more than my name.
 «I do not know who I am, but I know that I do it with me»❤ Software Developer ❤
 
 
