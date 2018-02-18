@@ -32,52 +32,67 @@ When I have to talk about myself sometimes I can only say more than my name.
   
 
 
+  <h1>Social Icon Animation</h1>
+<div id="socialicons">
+<div class="socialicon">
+<div class="dribbblecolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-dribbble dribbble"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="facebookcolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-facebook-square facebook"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="googlecolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-google-plus-square google"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="flickrcolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-flickr flickr"></i>
+</div> 
+</div>                  
+<div class="socialicon">
+<div class="pinterestcolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-pinterest-square pinterest"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="githubcolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-github-alt github"></i>
+</div> 
+</div> 
+<div class="socialicon">
+<div class="linkedincolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-linkedin-square linkedin"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="youtubecolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-youtube-square youtube"></i>
+</div> 
+</div>
+<div class="socialicon">
+<div class="tumblrcolor socialiconcircle1"></div>
+<div class="socialiconcircle2">
+<i class="fa icons fa-tumblr-square tumblr"></i>
+</div> 
+</div>       
 </div>
 
 
-<div class="social">
-  <span class="line"></span>
-  <ul>
-    <li class="facebook">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <i class="fa fa-facebook fa-2x"></i>
-      </a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/Hugmanrique" target="_blank">
-        <i class="fa fa-twitter fa-2x"></i>
-      </a>
-    </li>
-    <li class="youtube">
-      <a href="https://www.youtube.com/Hugmanrique" target="_blank">
-        <i class="fa fa-youtube fa-2x"></i>
-      </a>
-    </li>
-    <li class="instagram">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <i class="fa fa-instagram fa-2x"></i>
-      </a>
-    </li>
-    <li class="pinterest">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <i class="fa fa-pinterest fa-2x"></i>
-      </a>
-    </li>
-    <li class="github">
-      <a href="https://www.github.com/Hugmanrique121" target="_blank">
-        <i class="fa fa-github fa-2x"></i>
-      </a>
-    </li>
-    <li class="flickr">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <i class="fa fa-flickr fa-2x"></i>
-      </a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <i class="fa fa-linkedin fa-2x"></i>
-      </a>
-    </li>
-  </ul>
 </div>
+
+
+
 
