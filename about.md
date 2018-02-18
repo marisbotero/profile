@@ -34,19 +34,6 @@ When I have to talk about myself sometimes I can only say more than my name.
 
 </div>
 
-<div class="social-container">
-    <ul class="social-icons">
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-codepen"></i></a></li>
-    </ul>
-    <ul class="social-icons">
-      <li><a href="#" class="social-square"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#" class="social-square"><i class="fa fa-dribbble"></i></a></li>
-      <li><a href="#" class="social-square"><i class="fa fa-github"></i></a></li>
-      <li><a href="#" class="social-square"><i class="fa fa-stack-overflow"></i></a></li>
-    </ul>
-</div>
+
 
 
