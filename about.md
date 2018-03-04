@@ -7,15 +7,7 @@ permalink: /about/
 <div class="index-wrapper">
 
 
-<body>
-    <div class="main">
-      <h1><span style="color: #88b468">W</span><span span style="color: #b73999">e</span><span style="color: #dc3c3c">l<span style="color: #00aba5">c</span><span style="color: #93c56e">o</span><span style="color: #a6378e">m</span><span style="color:#d28e5d">e</span><span style="color: #dc3c3c">!</span></h1>
-      <p><span style="color: #00aba5">print</span>(<span style="color: #d0373f">"My name is Maris Botero =)"</span>)</p>
-      <p><span style="color: #6a6890">I am .</span></p>
-    
-      <p><span style="color: #ca363e">I specialise in product design, UX/UI design, visual design.</span></p>
-      <p><span style="color: #b43896">I ❤ coding and hacking things: HTML5, CSS3, JS, Python, *VR design, RubyOnRails </span></p>
-  </body>
+
 
 
       <div class="girl">
@@ -34,6 +26,13 @@ permalink: /about/
     <div>
    
 
+<body>
+    <div class="main">
+      <h1><span style="color: #88b468">W</span><span span style="color: #b73999">e</span><span style="color: #dc3c3c">l<span style="color: #00aba5">c</span><span style="color: #93c56e">o</span><span style="color: #a6378e">m</span><span style="color:#d28e5d">e</span><span style="color: #dc3c3c">!</span>
+      <p><span style="color: #00aba5">print</span>(<span style="color: #d0373f">"My name is Maris Botero =)"</span>)</p>
+      <p><span style="color: #6a6890">I am an engineer and student of master's degree in data science..</span></p>
+      <p><span style="color: #b43896">I ❤ coding and hacking things: HTML5, CSS3, JS, Python, *VR design, RubyOnRails </span></p>
+</body>
 </div>
     </div>
   
