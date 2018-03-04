@@ -1,5 +1,3 @@
-_site/
-.sass-cache/
-node_modules/
-package-lock.json
-dist/
+_site
+.sass-cache
+.jekyll-metadata
