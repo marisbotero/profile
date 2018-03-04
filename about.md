@@ -59,7 +59,7 @@ permalink: /about/
 h1 {
   border-bottom: 1px solid #d6d6d6;
   font-family: 'Droid Sans Mono', monospace;
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 10px;
   color:
 }
