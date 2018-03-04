@@ -10,12 +10,11 @@ permalink: /about/
 
 
 
-<body>
+
     <div class="main">
       <h1><span style="color: #88b468">W</span><span span style="color: #b73999">e</span><span style="color: #dc3c3c">l<span style="color: #00aba5">c</span><span style="color: #93c56e">o</span><span style="color: #a6378e">m</span><span style="color:#d28e5d">e</span><span style="color: #dc3c3c">!</span>
       <p><span style="color: #00aba5">print</span>(<span style="color: #d0373f">"My name is Maris Botero =)"</span>)</p>
       <p><span style="color: #b43896">I ❤ coding </span></p>
-</body>
 
   
 
@@ -55,9 +54,7 @@ permalink: /about/
 <style>
 
   
-  body {
-  background-color: #292b36;
-}
+
 
 h1 {
   border-bottom: 1px solid #d6d6d6;
