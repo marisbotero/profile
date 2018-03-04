@@ -128,7 +128,7 @@ img {
 .page-container {
   position: relative;
   padding-top: 55px;
-  font-family: "Titillium Web", Arial;
+  font-family:  Arial;
   letter-spacing: .09em;
 }
 
@@ -464,7 +464,7 @@ img {
 }
 
 .chinese {
-    font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: Arial;
     line-height: 24px;
 }
 
@@ -473,7 +473,7 @@ img {
 }
 
 .english {
-  font-family: "Titillium Web", sans-serif;
+  font-family: Arial;
   line-height: 21px;
 }
 
@@ -656,7 +656,7 @@ img {
   width:100%;
   text-align:center;
   text-decoration:none;
-  font-family:Helvetica, sans-serif;
+  font-family:Arial;
 }
 .me:hover{
   color:skyblue;
