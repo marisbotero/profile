@@ -16,16 +16,9 @@ permalink: /about/
       <p><span style="color: #ca363e">I specialise in product design, UX/UI design, visual design.</span></p>
       <p><span style="color: #b43896">I ❤ coding and hacking things: HTML5, CSS3, JS, Bootstrapping, Python, *VR design.</span></p>
       <p class="contact" style="color: #95c76f">/* Extremely in love with the Italian cuisine  */</p>
-      <a href="mailto:hello@peterjavorkai.com"><p>contact_me()</p></a>
-      <a href="http://www.peterjavorkai.com"><p>check_portfolio()</p></a>
-      <p>=============================</p>
-      <p class="blinking-cursor">|</p>
-    </div>
-  </body>
 
-
-
-  <div class="girl">
+      
+      <div class="girl">
     <div class="cabello"></div>
     <div class="cabello3"></div>
      <div class="cabello5"></div>
@@ -42,6 +35,12 @@ permalink: /about/
    
 
 </div>
+    </div>
+  </body>
+
+
+
+  
 
 <style>
   
