@@ -17,7 +17,7 @@ permalink: /about/
       <p><span style="color: #b43896">I ❤ coding and hacking things: HTML5, CSS3, JS, Bootstrapping, Python, *VR design.</span></p>
       <p class="contact" style="color: #95c76f">/* Extremely in love with the Italian cuisine  */</p>
 
-      
+
       <div class="girl">
     <div class="cabello"></div>
     <div class="cabello3"></div>
@@ -42,6 +42,21 @@ permalink: /about/
 
   
 
+
+
+
+
+ 
+
+
+  
+
+
+</div>
+
+
+
+
 <style>
   
   body {
@@ -51,14 +66,14 @@ permalink: /about/
 h1 {
   border-bottom: 1px solid #d6d6d6;
   font-family: 'Droid Sans Mono', monospace;
-  font-size: 32px;
+  font-size: 15px;
   padding-bottom: 10px;
   color:
 }
 
 p {
   font-family: 'Droid Sans Mono', monospace;
-  font-size: 18px;
+  font-size: 14px;
   color: white;
 }
 
@@ -141,18 +156,3 @@ a:hover{
 }
 
 </style>
-
-
-
-
- 
-
-
-  
-
-
-</div>
-
-
-
-
