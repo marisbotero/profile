@@ -1036,46 +1036,7 @@ opacity:1;
   95%{opacity: 1; }
   100% {opacity: 1; } }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  &:before, &:after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-}
-
-html {
-  min-height: 100vh;
-  display: grid;
-}
-
-body {
-  min-height: 100vh;
-  display: grid;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: #fff6ea;
-}
-
-.container {
-  margin: auto;
-  width: 4rem;
-  height: 2rem;
-}
-
-.heart {
+heart {
   position: absolute;
   &:nth-child(1) svg {
     opacity: 0;
