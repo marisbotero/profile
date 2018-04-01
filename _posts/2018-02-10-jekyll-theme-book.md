@@ -6,9 +6,10 @@ tags: english
 category: blog
 ---
 
-Simple is better
+💜Simple is better⭐
 -----------
 
+##Hi! 😁 I am happy to meet you. I believe in magic, I like strawberry ice cream and play with code.
  
   <section>
     <div class="loader loader-2">
