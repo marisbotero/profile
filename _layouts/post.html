@@ -60,8 +60,8 @@ layout: page
   <!-- disqus comment system -->
   {% if site.disqus_shortname != '' %}
   <div class="post-comment">
-    {% assign url = page.url | absolute_url %}
-      {% include disqus.html username = site.disqus url = url id = page.id %}
+    {% include disqus.html %}
+    {% include disqus.html username = site.disqus url = url id = page.id %}
   </div>
   {% endif %}
 
@@ -71,3 +71,4 @@ layout: page
 </div>
 
 
+ 
