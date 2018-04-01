@@ -16,7 +16,7 @@ category: blog
 
 ## Get started 🚀
 
-From what to start? Hi my name is Maris and I want to share with you some of my thoughts and experiences in programming. The first thing I have to say is that I am an apprentice, yes I am. When I was thinking which programming language will fit me the best?... I was so confused and I love the internet but I found so much information that I did not known what were the best for me.
+From what to start? Hi my name is Maris and I want to share with you some of my thoughts and experiences in programming. The first thing I have to say is that I am an apprentice, yes I am. When I was thinking which programming language will fit me the best?... I was so confused and I love the internet but I found so much information that I did not known what which was the best.
 First of all, it all depends on what you would like to develop. The success story they told you. It is not the same for each person… please be yourself and find your own way.
 There is a massive number of platforms, frameworks and in general languages with which you can develop your soon-to-be awesome skills.👩‍💻
 
