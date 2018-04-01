@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 <div class="footer-clear post-wrapper">
 
@@ -60,7 +60,8 @@ layout: default
   <!-- disqus comment system -->
   {% if site.disqus_shortname != '' %}
   <div class="post-comment">
-    {% include disqus.html %}
+    {% assign url = page.url | absolute_url %}
+      {% include disqus.html username = site.disqus url = url id = page.id %}
   </div>
   {% endif %}
 
@@ -68,3 +69,5 @@ layout: default
   {% include footer.html %}
 
 </div>
+
+
