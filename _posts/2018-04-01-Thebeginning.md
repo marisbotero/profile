@@ -1,6 +1,6 @@
 ---
 layout: post
-title: R
+title: How to start to programming?
 date: 2018-03-03
 tags: english
 category: blog
@@ -26,7 +26,7 @@ There is a massive number of platforms, frameworks and in general languages with
 For Beginners who need some hints here is basic small overview of popular  languages an their implementations: Developing beautiful websites, HTML, CSS, Javascript, Java, Python.
 Creating apps with Android SDK (for Android apps, based on Java), SWIFT (for IOS apps, based on objective-C)
 Working with data, artificial intelligence, statistics you should use python. I love it.🐍
-Ruby on Rails is easy you can create amazing web application.
+Ruby on Rails is easy you if you can create amazing web application.
 
 
 
