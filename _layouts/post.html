@@ -1,73 +1,41 @@
 ---
 layout: default
 ---
-<div class="footer-clear post-wrapper">
 
-  <!-- post archive trigger -->
-  <div class="post-archive-trigger">
-    <div class="post-archive-icon"></div>
-  </div>
+<main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    {% include page-image.html %}
+    <div class="page-wrapper">
+      <header class="page-header">
+        {% assign title = page.title | markdownify | strip_html %}
+        {% if page.link %}
+          <h1 id="page-title" class="page-title p-name"><a href="{{ page.link }}">{{ title }} <span class="link-arrow">&rarr;</span></a></h1>
+        {% else %}
+          <h1 id="page-title" class="page-title p-name">{{ title }}</h1>
+        {% endif %}
+      </header>
 
-  <!-- post archive -->
-  <div class="post-archive">
-    <div class="post-archive-iterms">
-      {% for post in site.posts %}
-      {% if page.url == post.url %}
-      {% assign status = 'checked' %}
-      {% else %}
-      {% assign status = '' %}
-      {% endif %}
-      <a class="post-archive-iterm" href="{{ post.url }}">
-        <span class="post-archive-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <span class="post-archive-title {{ status }}">{{ post.title }}</span>
-      </a>
-      {% endfor %}
+      <div class="page-sidebar">
+        {% include page-author.html %}
+        {% include page-categories.html %}
+        {% include page-tags.html %}
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          {{ content }}
+        </div>
+
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+
+        {% if site.disqus.shortname %}
+          {% include disqus-comments.html %}
+        {% endif %}
+
+        {% include page-pagination.html %}
+      </div>
     </div>
-  </div>
-
-  <!-- post header -->
-  <div class="post-header">
-    <h1>{{ page.title }}</h1>
-    <span>{{ page.date | date: "%Y-%m-%d" }}</span>
-  </div>
-
-  <!-- post content -->
-  {% if page.tags contains 'chinese' %}
-  {% assign type = 'chinese' %}
-  {% else %}
-  {% assign type = 'english' %}
-  {% endif %}
-
-  <div class="post-content {{ type }}">
-    {{ content }}
-  </div>
-
-  <!-- post navigator -->
-  <div class="post-nav">
-    {% if page.previous %}
-    <a class="post-nav-previous"href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-    {% endif %}
-
-    {% if page.previous and page.next %}
-    <div class="post-nav-sep"></div>
-    {% endif %}
-
-    {% if page.next %}
-    <a class="post-nav-next" href="{{ page.next.url }}">{{ page.next.title }}</a>
-    {% endif %}
-  </div>
-
-  <!-- disqus comment system -->
-  {% if site.disqus_shortname != '' %}
-  <div class="post-comment">
-    {% assign url = page.url | absolute_url %}
-    {% include disqus.html username = site.disqus url = url id = page.id %}
-    
-  </div>
-  {% endif %}
-
-  <!-- footer -->
-  {% include footer.html %}
-
-</div>
-
+  </article>
+</main>
