@@ -15,55 +15,26 @@
 # in the templates via {{ site.myvariable }}.
 title: Maris Botero
 email: maris2143@gmail.com
-description: ⭐🌟 print("My name is Maris and I like to play with code =)") 💚 May humanity be our only race, and love our religion💛
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: marisbotero
 github_username:  marisbotero
 
-paginate: 2
-locale: en_us
-nav_list:
-  Home : ['Home', '/', 'fa-home']
-  About : ['About', '/about', 'fa-heart']
-  Motivation : ['Art', '/category/art/', 'fa-star']
-  Front End : ['Robots', '/category/Robots', 'fa-code']
-  Back End : ['Code', '/category/Code/', 'fa-diamond']
-
-single_footer: '<p> Made with <i class="fa fa-heart"></i> | Hosted by Github. | 2018 © </p>'
-
+# Build settings
 markdown: kramdown
+theme: minima
 gems:
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-mentions
-include: ["_pages"]
 exclude:
   - Gemfile
   - Gemfile.lock
 
-jekyll-mentions: https://twitter.com
-
-livereload: true
-
-sass:
-  style: compressed
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
-    values:
-      layout: "post"
-      comments: true
-      feature_image: recommend-omniauth
-      author_name: "Maris Botero"
-      read_time: 3
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "pages" # previously `post` in Jekyll 2.2.
-    values:
-      layout: "page"
+# disqus
+# ============================================================================
+# turn it off for all posts -> disqus: false
+# turn it off for a particular post -> add `comment: false` to post front matter
+disqus: kkninjae

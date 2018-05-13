@@ -1,34 +1,73 @@
 ---
 layout: default
 ---
+<div class="footer-clear post-wrapper">
 
-<header class="hero-image" style="background-image: url({{ site.baseurl }}/assets/img/{{page.feature_image}}.jpg);">
-    <span class="menu-trigger animated fadeInDown">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </span>
+  <!-- post archive trigger -->
+  <div class="post-archive-trigger">
+    <div class="post-archive-icon"></div>
+  </div>
 
-    {% include nav-no-js.html %}
-    {% include nav.html %}
-</header>
+  <!-- post archive -->
+  <div class="post-archive">
+    <div class="post-archive-iterms">
+      {% for post in site.posts %}
+      {% if page.url == post.url %}
+      {% assign status = 'checked' %}
+      {% else %}
+      {% assign status = '' %}
+      {% endif %}
+      <a class="post-archive-iterm" href="{{ post.url }}">
+        <span class="post-archive-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <span class="post-archive-title {{ status }}">{{ post.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
 
-<main class="container">
-    <div class="row">
-        <div class="col-xs-12 single-content">
-            <p class="meta">
-                <a href="{{ page.author_url | prepend: site.baseurl }}">{{ page.author_name }}</a> in <a href='{{ "/category/" | append: page.categories.first | prepend: site.baseurl }}'>{{ page.categories[0] | capitalize }}</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ page.read_time }} minutes
-            </p>
+  <!-- post header -->
+  <div class="post-header">
+    <h1>{{ page.title }}</h1>
+    <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+  </div>
 
-            <h1>{{ page.title }}</h1>
+  <!-- post content -->
+  {% if page.tags contains 'chinese' %}
+  {% assign type = 'chinese' %}
+  {% else %}
+  {% assign type = 'english' %}
+  {% endif %}
 
-            {{ content }}
+  <div class="post-content {{ type }}">
+    {{ content }}
+  </div>
 
-            {% include disqus.html disqus_identifier=page.disqus_identifier %}
-        </div><!-- main-content/col -->
-    </div> <!--/row -->
+  <!-- post navigator -->
+  <div class="post-nav">
+    {% if page.previous %}
+    <a class="post-nav-previous"href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+    {% endif %}
 
-</main> <!-- /container -->
-<footer class="single">
-    {% include footer-single.html %}
-</footer>
+    {% if page.previous and page.next %}
+    <div class="post-nav-sep"></div>
+    {% endif %}
+
+    {% if page.next %}
+    <a class="post-nav-next" href="{{ page.next.url }}">{{ page.next.title }}</a>
+    {% endif %}
+  </div>
+
+  <!-- disqus comment system -->
+  {% if site.disqus_shortname != '' %}
+  <div class="post-comment">
+    {% assign url = page.url | absolute_url %}
+    {% include disqus.html username = site.disqus url = url id = page.id %}
+    
+  </div>
+  {% endif %}
+
+  <!-- footer -->
+  {% include footer.html %}
+
+</div>
+
