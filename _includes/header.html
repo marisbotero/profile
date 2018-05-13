@@ -1,0 +1,89 @@
+<div id="page" class="hfeed site">
+    <a href="{{ site.baseurl }}/" rel="home" class="header-image">
+      <img src="{{ site.baseurl }}/assets/img/nav.png" width="720" height="43" alt="blog heading">
+    </a>
+    <div id="menu-toggle-nav" class="panel">
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+      <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+      <div class="menu">
+
+
+        <ul>
+          <li class="current_page_item">
+            <a href="{{ site.baseurl }}/">Blog</a>
+          </li>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li class="current_page_item">
+                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav><!-- #site-navigation -->
+  </div>
+  <div id="social-links-toggle-nav" class="panel">
+    <div class="social-links">
+      <ul id="menu-social-links" class="menu">
+        <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom">
+          <a target="_blank" href="https://twitter.com/AnaMariaSosaM">
+            <span class="screen-reader-text">Twitter</span>
+          </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom">
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=1196953549">
+            <span class="screen-reader-text">Facebook</span>
+          </a>
+        </li>
+        <li  class="menu-item menu-item-type-custom menu-item-object-custom">
+          <a target="_blank" href="https://plus.google.com/u/0/+AnaSosa/posts">
+            <span class="screen-reader-text">Google Plus</span>
+          </a>
+        </li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom">
+          <a target="_blank" href="https://github.com/{{site.github_username}}">
+            <span class="screen-reader-text">Github</span>
+          </a>
+        </li>
+
+        <li class="menu-item menu-item-type-custom menu-item-object-custom">
+          <a href="mailto:{{site.email}}?Subject=Me%20gusta%20tu%20blog" target="_top">
+            <span class="screen-reader-text">Email</span>
+          </a>
+        </li>   
+      </ul>
+    </div>   
+  </div>
+
+  <div id="search-toggle-nav" class="panel">
+    <div class="search-wrapper">
+     <div id="search-container">
+       <input type="text" id="search-input" class="search-form seacrh-input" placeholder="Escribe el título de la entrada...">
+       <div class="col-md-12 content-panel articles">
+         <ul id="results-container"></ul>
+       </div>
+     </div>
+    </div>
+  </div>
+    
+  <header id="masthead" class="site-header" role="banner">
+    <div class="site-header-wrapper">
+      <div class="site-branding">
+        <h1 class="site-title"><a href="{{ site.baseurl }}/" rel="home">Ana María Sosa</a></h1>
+        <h4 class="site-deck">Web citizen</h4>
+      </div>
+      <div class="toggles">
+        <div id="menu-toggle" class="toggle" title="Menu">
+          <span class="screen-reader-text">Menu</span>
+        </div><!-- #menu-toggle -->
+        <div id="social-links-toggle" class="toggle" title="Social Links">
+          <span class="screen-reader-text">Social Links</span>
+        </div><!-- #social-links-toggle -->
+        <div id="search-toggle" class="toggle" title="Search">
+          <span class="screen-reader-text">Search</span>
+        </div><!-- #search-toggle -->
+      </div><!-- .toggles -->
+    </div>
+  </header>

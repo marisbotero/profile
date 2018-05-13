@@ -1,15 +1,30 @@
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if  page.tags %}
+    <meta name="keywords" content="{{ page.tags }}" >
+  {% else %}
+    <meta name="keywords" content="HTML,CSS,front end,developer tools,JavaScript">
+  {% endif %}
 
+  <meta name="author" content="Ana María Sosa">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<!-- favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
-<link rel="icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <!-- Twitter Card -->
+  {% include twitterCard.html %}
 
-<!-- font -->
-<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i" rel="stylesheet">
+  <!-- Facebook Open Graph -->
+  {% include facebookCard.html %}
 
-<!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+  {% include favicons.html %}
+  {% include analytics.html %}
+</head>
